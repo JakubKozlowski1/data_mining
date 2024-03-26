@@ -5,4 +5,4 @@
     2) Make at least 2 models to compare the effectiveness.
 
 ### Data
-Data comes from [https://www.kaggle.com/datasets/ban7002/fraud-challenge-data](Kaggle)
+Data comes from [Kaggle](https://www.kaggle.com/datasets/ban7002/fraud-challenge-data)
