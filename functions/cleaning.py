@@ -11,9 +11,7 @@ def cleaning():
     """
     # Imports
     import pandas as pd
-    from sklearn.neighbors import LocalOutlierFactor
     from functions.os_selection import os_selection
-    from sklearn.model_selection import train_test_split
     import os
     
     path = os.getcwd() + '/data/fraud_challenge_150k.csv'
@@ -52,11 +50,14 @@ def cleaning():
     # Transition into categorical variables
     df['acc_age'] = pd.cut(x=df['account_age_days'], 
                        bins = [0, 1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9200],
-                       labels=['1', '2', '3', '4', '5', '6', '7', '8', '9'])
+                       labels=['1', '2', '3', '4', '5', '6', '7', '8', '9']).astype('object')
     df['d_last_logon'] = pd.cut(x=df['days_since_last_logon'],
                             bins=[0, 20, 40, 60, 80, 100],
                             labels=['1', '2', '3', '4', '5'],
-                            include_lowest=True)
-    
+                            include_lowest=True).astype('object')
+    df = df.drop(columns=['account_age_days', 'days_since_last_logon'])
+   
+    df = df[df['historic_velocity'] <= 9000]
+   
     return df
 
