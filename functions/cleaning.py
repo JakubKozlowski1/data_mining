@@ -21,8 +21,8 @@ def cleaning_lr():
     
     
     df = df.drop(columns=['applicant_name','phone_number','applicant_name',
-                        'billing_address', 'merchant_id', 'locale',
-                        'email_domain','ip_address',
+                        'billing_address', 'merchant_id',
+                        'email_domain','ip_address', 'locale',
                         'billing_city','billing_postal','billing_state',
                         'card_bin'])
     
