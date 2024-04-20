@@ -15,7 +15,6 @@ def cleaning_lr():
     from functions.iqr_outlier import remove_outliers_iqr
     import os
     
-    
     path = os.getcwd() + '/data/fraud_challenge_150k.csv'
     df = pd.read_csv(path)
     
@@ -138,7 +137,5 @@ def cleaning_rf():
                             labels=['1', '2', '3', '4', '5'],
                             include_lowest=True).astype('int')
     df = df.drop(columns=['account_age_days', 'days_since_last_logon'])
-   
-    
    
     return df
