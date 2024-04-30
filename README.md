@@ -70,6 +70,6 @@ During the evaluation stage each model was evaluated separetely and compared at 
 
 
 
-\* amount of folds and parameters options reduced due to hardware limitations.
+\* amount of folds and parameters options reduced due to hardware limitations. The parameters are still to be updated.
 ### Requirments
 Needed packages are listed in requirments.txt file. To visualize '.dot' files [GraphViz] (https://dreampuf.github.io/GraphvizOnline) can be used.
