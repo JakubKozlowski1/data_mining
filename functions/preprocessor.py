@@ -1,6 +1,7 @@
 def preprocessor(X_train):
     """
     Initial preprocessing of data before model training.
+    Standard scaler and one hot encoder.
     """
 
     from sklearn.preprocessing import StandardScaler, OneHotEncoder
