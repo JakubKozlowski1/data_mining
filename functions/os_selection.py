@@ -1,4 +1,7 @@
 def os_selection(row):
+    """
+    Transforamtnio of values in os column.
+    """
     if 'Windows' in row['os']:
          return 'Windows'
     elif 'Linux' in row['os']:

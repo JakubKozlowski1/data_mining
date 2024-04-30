@@ -1,7 +1,8 @@
 # Fraud Detection Project
 # IN-PROGRESS
 ### Absract
-This project was done to find the most robust model in detection of fraud transactions. The analyzed models were: logistic regression, random forest classifier, xgb, and lgbm. The best results yield random forest classifier.
+This project was done to find the most robust model in detection of fraud transactions. The analyzed models were: logistic regression, random forest classifier, xgb, and lgbm. The best results yield random forest classifier. \ 
+The fraudulent transactions are connected to adjusted transaction amount (may consist of currency exchange fees etc.) and transaction amount which indicates that big transactions in foreign currencies need more atentnion in authorization process. Especially in danger are clients of banks: H, S, V, U and N with accounts open for a long time - maybe connected to age of client.  
 ![Results](img/pr_result.png)
 
 ### Goal
@@ -45,14 +46,14 @@ Variables:
 26. **EVENT_LABEL**: The label or classification of the event, often used in supervised learning for fraud detection.
 
 ### Description
-[exploration.ipynb, functions]
+[exploration.ipynb, functions] \
 Cleaning of data consisted of outlier deletion based on IQR, and filling in missing values with new class value or deletion. The distributions of variables were explored. Extraction of features was done on date and user agent. VIF was calcualted to check for multicollinearity.
 
-[log_reg.ipynb, random_forest.ipynb, xgboost.ipynb, lgbm.ipynb, functions]
-Preprocessing step consisted of numerical variables scaling (StandardScaler()) and categorical variables encoding (OneHotEncoder()). Due to imbalance in target variable, dataset before fitting model were undersampled (RandomUnderSampler) or oversampled (SMOTE).  
+[log_reg.ipynb, random_forest.ipynb, xgboost.ipynb, lgbm.ipynb, functions] \
+Preprocessing step consisted of numerical variables scaling (StandardScaler()) and categorical variables encoding (OneHotEncoder()). Due to imbalance in target variable, dataset before fitting model were undersampled (RandomUnderSampler) or oversampled (SMOTE). \
 Logistic regression, random forest classiffier, xgb and lgbm models were built on under- and oversampled data and cross-validated using GridSearchCV with hyperparameter tuning.*
 
-[evaluation.ipynb, functions]
+[evaluation.ipynb, functions] \
 During the evaluation stage each model was evaluated separetely and compared at the end. The metrics are:
 1. ROC
 2. Precision-recall curve

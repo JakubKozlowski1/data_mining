@@ -1,4 +1,7 @@
 def remove_outliers_iqr(df, columns):
+    """
+    Removing outliers based on IQR.
+    """
     for i in columns:
         if i != 'EVENT_LABEL':
             q1 = df[i].quantile(0.25)
